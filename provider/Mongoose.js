@@ -21,7 +21,7 @@ class MongooseProvider extends ServiceProvider {
         const mongoUser = Config.get('mongo.user', '')
         const mongoPass = Config.get('mongo.pass', '')
         const connectUri = `${mongoHost}:${mongoPort}/${mongoDb}`
-        const connectionString = (mongoUser !== '' || mongoPass !== '') ? `mongodb://${mongoUser}:${mongoPass}@${connectUri}` : connectUri
+        const connectionString = (mongoUser !== '' || mongoPass !== '') ? `mongodb://${mongoUser}:${mongoPass}@${connectUri}` : `mongodb://${connectUri}`
 
         AdonisMongoose.connect(connectionString, { useMongoClient: true })
       }
