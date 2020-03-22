@@ -13,8 +13,7 @@
     "mongodb"
   ],
   "dependencies": {
-    "mongoose": "^4.13.6",
-    "tunnel-ssh": "^4.1.4"
+    "mongoose": "^4.13.6"
   },
   "author": "King Sinbad",
   "license": "ISC"
